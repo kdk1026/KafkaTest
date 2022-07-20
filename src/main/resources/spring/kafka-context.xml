@@ -12,9 +12,9 @@
 			<beans:props>
 				<beans:prop key="topic">test</beans:prop>
 				<beans:prop key="bootstrap.servers">127.0.0.1:9092</beans:prop>
-				<beans:prop key="acks">all</beans:prop>
 				<beans:prop key="key.serializer">org.apache.kafka.common.serialization.StringSerializer</beans:prop>
 				<beans:prop key="value.serializer">org.apache.kafka.common.serialization.StringSerializer</beans:prop>
+				<beans:prop key="acks">all</beans:prop>
 				<beans:prop key="buffer.memory">33554432</beans:prop>
 			</beans:props>
 		</beans:property>
@@ -26,11 +26,11 @@
 				<beans:prop key="topic">test</beans:prop>
 				<beans:prop key="bootstrap.servers">127.0.0.1:9092</beans:prop>
 				<beans:prop key="group.id">group1</beans:prop>
-				<beans:prop key="enable.auto.commit">true</beans:prop>
-				<beans:prop key="auto.commit.interval.ms">1000</beans:prop>
-				<beans:prop key="session.timeout.ms">30000</beans:prop>
+				<beans:prop key="auto.offset.reset">earliest</beans:prop>
 				<beans:prop key="key.deserializer">org.apache.kafka.common.serialization.StringDeserializer</beans:prop>
 				<beans:prop key="value.deserializer">org.apache.kafka.common.serialization.StringDeserializer</beans:prop>
+				<beans:prop key="enable.auto.commit">true</beans:prop>
+				<beans:prop key="auto.commit.interval.ms">1000</beans:prop>
 			</beans:props>
 		</beans:property>
 	</beans:bean>
