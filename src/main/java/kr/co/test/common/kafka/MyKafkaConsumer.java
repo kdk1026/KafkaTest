@@ -1,5 +1,6 @@
 package kr.co.test.common.kafka;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
 
@@ -23,14 +24,6 @@ public class MyKafkaConsumer {
 	private Properties props;
 
 	/**
-	 *
-	 */
-//	public MyKafkaConsumer(Properties props) {
-//		super();
-//		this.props = props;
-//	}
-
-	/**
 	 * @return the prop
 	 */
 	public Properties getProps() {
@@ -50,7 +43,7 @@ public class MyKafkaConsumer {
 
 		String msg = "";
 		while (true) {
-			ConsumerRecords<String, String> consumerRecords = consumer.poll(100);
+			ConsumerRecords<String, String> consumerRecords = consumer.poll(Duration.ofMillis(100));
 			for (ConsumerRecord<String, String> consumerRecord : consumerRecords) {
 				msg += consumerRecord.value();
 			}

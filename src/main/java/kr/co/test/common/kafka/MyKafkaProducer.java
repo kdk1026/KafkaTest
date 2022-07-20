@@ -21,14 +21,6 @@ public class MyKafkaProducer {
 	private Properties props;
 
 	/**
-	 *
-	 */
-//	public MyKafkaProducer(Properties props) {
-//		super();
-//		this.props = props;
-//	}
-
-	/**
 	 * @return the prop
 	 */
 	public Properties getProps() {
